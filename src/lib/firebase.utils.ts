@@ -10,12 +10,13 @@ import { initializeFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDLA-Uhtnlo9jSidBHG7qkU3Ry3TJ0dTQs",
-  authDomain: "fir-vite-ui.firebaseapp.com",
-  projectId: "fir-vite-ui",
-  storageBucket: "fir-vite-ui.appspot.com",
-  messagingSenderId: "848773404383",
-  appId: "1:848773404383:web:99fa25a6cf79aa918dfb6a",
+  apiKey: "AIzaSyCnzYabJzxqfZSmwsLUVFOdDfX1MtGika0",
+  authDomain: "strategai-f7b58.firebaseapp.com",
+  projectId: "strategai-f7b58",
+  storageBucket: "strategai-f7b58.appspot.com",
+  messagingSenderId: "325273673330",
+  appId: "1:325273673330:web:c928db8866dd51aae7aceb",
+  measurementId: "G-QXLM911CVP",
 };
 
 // Initialize Firebase
