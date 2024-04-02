@@ -140,7 +140,7 @@ const BudgetContextProvider = (props: {
         collection(userRef, "budgetSubCategories").withConverter(
           budgetSubCategoryConverter
         ),
-        orderBy("label")
+        orderBy("name")
       );
 
       const unsubscribe = onSnapshot(
