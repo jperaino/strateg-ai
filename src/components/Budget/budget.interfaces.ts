@@ -1,14 +1,25 @@
-export interface BudgetCategory {
+export interface FireBudgetCategory {
   name: string;
+  icon: string;
+}
+export interface BudgetCategory extends FireBudgetCategory {
+  id: string;
+}
+
+export interface HydratedBudgetCategory extends BudgetCategory {
   amount: number;
   subCategories: BudgetSubCategory[];
 }
 
-export interface BudgetSubCategory {
+export interface FireBudgetSubCategory {
   name: string;
-  category: string;
+  categoryId: string;
   amount: number;
   type: BudgetCategoryType;
+}
+
+export interface BudgetSubCategory extends FireBudgetSubCategory {
+  id: string;
 }
 
 export interface Budget {}
@@ -20,45 +31,4 @@ export enum BudgetCategoryType {
 
 // --------------------------------------------------
 
-const mockCateogry1 = "Home";
-const mockCateogry2 = "Food";
-const mockCateogry3 = "Income";
-
-export const mockSubCategories: BudgetSubCategory[] = [
-  {
-    name: "Rent",
-    category: mockCateogry1,
-    amount: 3850,
-    type: BudgetCategoryType.EXPENSE,
-  },
-  {
-    name: "Utilities",
-    category: mockCateogry1,
-    amount: 150,
-    type: BudgetCategoryType.EXPENSE,
-  },
-  {
-    name: "Groceries",
-    category: mockCateogry2,
-    amount: 600,
-    type: BudgetCategoryType.EXPENSE,
-  },
-  {
-    name: "Bars and alcohol",
-    category: mockCateogry2,
-    amount: 450,
-    type: BudgetCategoryType.EXPENSE,
-  },
-  {
-    name: "Restaurants",
-    category: mockCateogry2,
-    amount: 700,
-    type: BudgetCategoryType.EXPENSE,
-  },
-  {
-    name: "Paycheck",
-    category: mockCateogry3,
-    amount: 9000,
-    type: BudgetCategoryType.INCOME,
-  },
-];
+export const mockSubCategories: BudgetSubCategory[] = [];

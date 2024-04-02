@@ -8,10 +8,12 @@ import AppSkeleton from "./components/skeleton/AppSkeleton";
 import { TooltipProvider } from "./components/ui/tooltip";
 import BudgetPage from "./components/Budget/BudgetPage";
 import { BudgetContextProvider } from "./components/Budget/BudgetContext";
+import { Toaster } from "@/components/ui/sonner";
 
 function App() {
   return (
     <div className="min-w-screen min-h-screen">
+      <Toaster richColors />
       <AuthContextProvider>
         <TooltipProvider>
           <BrowserRouter>
